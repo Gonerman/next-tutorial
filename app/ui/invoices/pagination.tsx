@@ -6,17 +6,17 @@ import Link from 'next/link';
 import { generatePagination } from '@/app/lib/utils';
 
 export default function Pagination({ totalPages }: { totalPages: number }) {
-  const allPages = generatePagination(currentPage, totalPages);
+//   const allPages = generatePagination(currentPage, totalPages);
 
   return (
     <div className="inline-flex">
-      <PaginationArrow
+      {/* <PaginationArrow
         direction="left"
         href={createPageURL(currentPage - 1)}
         isDisabled={currentPage <= 1}
-      />
+      /> */}
 
-      <div className="flex -space-x-px">
+      {/* <div className="flex -space-x-px">
         {allPages.map((page, index) => {
           let position: 'first' | 'last' | 'single' | 'middle' | undefined;
 
@@ -35,13 +35,13 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
             />
           );
         })}
-      </div>
+      </div> */}
 
-      <PaginationArrow
+      {/* <PaginationArrow
         direction="right"
         href={createPageURL(currentPage + 1)}
         isDisabled={currentPage >= totalPages}
-      />
+      /> */}
     </div>
   );
 }
